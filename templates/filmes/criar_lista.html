@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/movies.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive/responsive_forms.css')}}">
+{% extends 'layout.html' %}
+{% block title %}Criar Lista{% endblock %}
+{% block content %}
+<form action="/criar" method="post" id="form" autocomplete="off">
+    <h1>Crie sua Lista de Filmes</h1>
+    <input type="text" name="movie" id="movie" required placeholder="Primeiro Filme">
+    <input type="submit" value="Procurar Filmes" id="search">
+    <input formaction="/criar/lista" type="submit" value="Finalizar" id="confirm" disabled>
+</form>
+{% if movies %}
+    <div id="movies_container">
+        <h1>Filmes Encontrados</h1>
+        {% for item in movies %}
+                <div class="movies">
+                    <div id="add_container">
+                        <span>Adicionar Filme</span>
+                        <button type="button" class="add_movie">➕</button>
+                    </div>
+                    <h2>{{ item['movie_name'] }} ({{ item['release_date'] }})</h2>
+                    <img src="{{ item['movie_image']}}" alt="Não há poster.">
+                </div>
+        {% endfor %}
+    </div>
+{% endif %}
+<button type="button" class="back_to_top hidden">&#8593;</button>
+{% endblock %}
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/choose_first_movie.js') }}"></script>
+<script src="{{ url_for('static', filename='js/back_to_top.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/section.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive/responsive_user_home.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div id="options">
+    <a href="{{ url_for('user.criar_lista') }}" id="create">
+        <button>
+        Criar Lista
+        </button>
+    </a>
+    <a href="{{ url_for('user.adicionar_filme') }}">
+        <button>
+        Adicionar
+        </button>
+    </a>
+    <a href="{{ url_for('user.modificar_lista') }}">
+        <button>
+        Modificar
+        </button>
+    </a>
+    <a href="{{ url_for('user.remover_filme') }}">
+        <button>
+        Remover
+        </button>
+    </a>
+</div>
+<div id="list">
+    {% if list_name %}
+      <h2>{{ list_name }}</h2>
+        <table>
+            <tr>
+                <th>Filme</th>
+                <th>Ano</th>
+            </tr>
+            <tr>
+                <td>{{ first_movie[:-7] }}</td>
+                <td>{{ first_movie[-5:-1] }}</td>
+            </tr>
+        </table>
+    {% else %}  
+        <p>Não há nenhuma lista por aqui...</p>
+    {% endif %}
+</div>
+{% endblock %}
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/block_list_creation.js') }}"></script>
+{% endblock %}

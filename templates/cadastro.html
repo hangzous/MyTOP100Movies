@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive/responsive_forms.css')}}">
+{% extends 'layout.html' %}
+
+{% block title %}Cadastre-se{% endblock %}
+{% block content %}
+<form action="/cadastro" method="POST" autocomplete="off">
+    <h1>Cadastro</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <input type="text" name="username" id="username" required placeholder="Nome">
+    <input type="password" name="password" id="password" required placeholder="Senha">
+    <input type="submit" value="Cadastrar" id="register">
+</form>
+{% endblock %}

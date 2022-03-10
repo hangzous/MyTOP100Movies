@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1335px) {
+
+    
+    main section form input {
+        width: 370px;
+    }
+
+
+    div#movies_container {
+        position: relative;
+        top: 90px;
+        left: 0;
+        padding: 15px;
+    }
+
+
+    main section form span {
+        margin: auto;
+        margin-top: 15px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 880px) {
+    
+    main section {
+        width: 100%;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    
+    main section button.back_to_top {
+        display: none;
+    }
+
+}

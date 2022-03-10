@@ -1,0 +1,70 @@
+div#movies_container {
+    position: absolute;
+    top: -190px;
+    left: 95%;
+}
+
+div#movies_container h1 {
+    text-align: center;
+}
+
+/* Adicionar Filme à Lista, Título e Ano, Poster do Filme */
+
+div.movies {
+    border: 1px solid rgb(96, 100, 100);
+    border-radius: 5px;
+    padding: 35px;
+    width: 370px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+div div#add_container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+div div#add_container span {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+div #add_container button.add_movie {
+    width: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 3px 1px rgba(98, 96, 96, .5);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+    background: rgba(119, 230, 230, .8);
+}
+
+div #add_container button#chosen_movie {
+    border: none;
+    background:  rgba(114, 226, 110, 0.7);
+    color: white;
+}
+
+div #add_container button.blocked {
+    background: rgba(233, 58, 58, 0.7);
+}
+
+div.movies h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+div.movies img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 5px 1px rgba(98, 96, 96, .5);
+}
+
+div.movies img[alt] {
+    box-shadow: none;
+}
