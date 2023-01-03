@@ -1,0 +1,5 @@
+@media only screen and (max-width: 770px) {
+    main section form {
+        margin-top: 110px;
+    }
+}

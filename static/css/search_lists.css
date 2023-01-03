@@ -1,0 +1,79 @@
+main section #search_header {
+    margin-top: 70px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+}
+
+main section #search_header div {
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+main section #search_header div form {
+    width: 350px;
+    margin-left: auto;
+    display: flex;
+}
+
+main section #search_header div form input {
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(227, 220, 220);
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+}
+
+main section #search_header div form button {
+    margin-left: 5px;
+}
+
+main section #search_header div form button img {
+    width: 30px;
+}
+
+main section #found_lists {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main section #found_lists #not_found p {
+    font-size: 18px;
+    color:rgb(201, 198, 198);
+}
+
+main section #found_lists .list {
+    margin-top: 30px;
+    box-shadow: 0px 3px rgba(36, 36, 36, .8);
+    border-radius: 2px;
+    width: 400px;
+    background-color: rgb(44, 44, 44);
+    padding: 15px;
+}
+
+main section #found_lists .list h2 {
+    color: rgb(226, 223, 223);
+    margin-bottom: 20px;
+}
+
+main section #found_lists .list h2 a {
+    color: rgb(72, 209, 72);
+}
+
+main section #found_lists .list div h3 {
+    color: rgb(206, 200, 200);
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+main section #found_lists .list div p {
+    color:rgb(206, 200, 200)
+}

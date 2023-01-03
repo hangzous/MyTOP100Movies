@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/error_404.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Página não encontrada — 100{% endblock %}
+{% block content %}
+<div id="error">
+    <h1>
+        404
+        <br>
+        Página não encontrada.
+    </h1>
+    <a href="/">Voltar ao início</a>
+</div>
+{% endblock %}

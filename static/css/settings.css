@@ -1,0 +1,156 @@
+div#settings {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#settings h2 {
+    color:rgb(233, 225, 225);
+}
+
+/* Referente às âncoras de cada config */
+
+div#settings
+div#settings_list {
+    width: 350px;
+    margin-right: 40px;
+    padding: 15px;
+    background-color: rgb(74, 71, 71);
+}
+
+div#settings
+div#settings_list h2 {
+    margin-bottom: 25px;
+    text-decoration: underline;
+}
+
+div#settings
+div#settings_list ul li {
+    font-size: 14pt;
+    margin-bottom: 25px;
+}
+
+div#settings
+div#settings_list ul li a {
+    color:rgb(233, 225, 225);
+}
+
+/* Referente as configurações centrais (centro da tela) */
+
+div#settings
+div#setting_section {
+    width: 90%;
+}
+
+div#settings
+div#setting_section
+div.setting {
+    margin-bottom: 45px;
+    box-shadow: 0px 3px rgba(36, 36, 36, .5);
+}
+
+div#settings
+div#setting_section
+div.setting h2 {
+    margin-bottom: 25px;
+}
+
+div#settings
+div#setting_section
+div.setting div {
+    padding: 15px;
+    background-color: rgb(74, 71, 71);
+}
+
+
+div#settings
+div#setting_section
+div.setting div form {
+    margin-bottom: 30px;
+}
+
+
+div#settings
+div#setting_section
+div.setting div form h3 {
+    margin-top: 10px;
+    color:rgb(235, 226, 226);
+}
+
+
+div#settings
+div#setting_section
+div.setting div form input {
+    width: 200px;
+    padding: 4px;
+    margin-top: 13px;
+    border: none;
+    background-color: rgb(250, 243, 243);
+    border-radius: 3px;
+    box-shadow: 1px 2px rgba(148, 142, 142, .7);
+}
+
+
+div#settings
+div#setting_section
+div.setting div form button.send {
+    width: 70px;
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    background-color:rgb(132, 59, 204);
+    color: rgb(233, 225, 225);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+div#settings
+div#setting_section
+div#account_lists div {
+    color:rgb(235, 226, 226);
+}
+
+div#settings
+div#setting_section
+div#account_lists div form input {
+    padding: 10px;
+    font-size: 12pt;
+}
+
+div#settings
+div#setting_section
+div#account_lists div form button {
+    margin-top: 15px;
+    width: 70px;
+    padding: 4px;
+    background-color:rgb(227, 44, 44);
+    font-weight: bold;
+    color: rgb(233, 225, 225);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+div#settings
+div#setting_section
+div#delete_account p {
+    color:rgb(233, 225, 225);
+    font-size: 13pt;
+    margin-bottom: 15px;
+}
+
+div#settings
+div#setting_section
+div#delete_account div form button {
+    cursor: pointer;
+    width: 100px;
+    padding: 4px;
+    background-color:rgb(227, 44, 44);
+    font-weight: bold;
+    color: rgb(233, 225, 225);
+    border: none;
+    border-radius: 3px;
+}

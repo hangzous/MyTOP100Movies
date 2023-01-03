@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/create_list.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Crie sua Lista — 100{% endblock %}
+{% block content %}
+<div id="create_list_container">
+    <form action="{{ url_for('user.create_list') }}" method="get">
+        <label for="list_name">Nome da lista 📄</label>
+        <input type="text" name="list_name" id="list_name" maxlength="50" required placeholder="Terror, Sci-Fi..." disabled>
+        <label for="first_movie">Pesquisar o primeiro filme 🔎</label>
+        <input type="text" name="first_movie" id="first_movie" required placeholder="Parasita">
+        <input type="submit" value="Pesquisar" id="search_movie">
+        <hr>
+        <input type="submit" value="Criar Lista" id="create" disabled>
+    </form>
+    
+    {% if movies %}
+    <div id="movies_list">
+        
+        {% if first_movie %}
+        <div id="fetched_movie">
+            <h2>Pesquisar por: {{ first_movie }}</h2>
+            <hr>
+        </div>
+        {% endif %}
+
+        {% for movie in movies %}
+        
+        <div class="movie">
+            <div id="movie_header"> 
+                <h3>{{ movie['movie_name'] }} ({{ movie['release_date'] }})</h3>
+                <button class="select_movie">Selecionar</button>
+            </div>
+            <div id="movie_info">
+                <img src="{{ movie['movie_image'] }}" alt="Não há poster.">
+                <p>
+                    <b>Sinopse</b>:
+                    <br>
+                    <br>
+                    {{ movie['overview'] }}
+                </p>
+            </div>
+            <hr>
+        </div>
+        
+        {% endfor %}
+
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/select_first_movie.js') }}"></script>
+{% endblock %}

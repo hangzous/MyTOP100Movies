@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login_register_forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/mobile_auth.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Login — 100{% endblock %}
+{% block content %}
+<form action="{{ url_for('auth.login') }}" method="post" id="form_login">
+    <div id="text">
+        <h2>LOGIN</h2>
+    </div>
+    {% for message in get_flashed_messages() %}
+    <div id="error_warning">
+        <p>{{ message }}</p>
+        <hr>
+    </div>
+    {% endfor %}
+
+    <label for="username">Nome de usuário</label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Senha</label>
+    <input type="password" name="password" id="password" required>
+    <hr>
+    <button type="submit">Entrar</button>
+</form>
+<div>
+    <p>
+        Não tem uma conta?
+        <a href="{{ url_for('auth.register') }}">Registre-se</a>
+     </p>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/user_profile_home.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Dashboard — 100{% endblock %}
+
+{% block content %}
+<div id="profile">
+    <div id="profile_header">
+        <h1>{{ current_user.username }}</h1>
+    </div>
+    <div id="profile_content">
+        {% if lists %}
+            {% for list in lists %}
+                <div class="list">
+                    <div class="list_header">
+                        <h2>{{ list.list_name }}</h2>
+                        <div class="buttons">
+                            <button>
+                                <a href="#">+</a>
+                            </button>
+                        </div>
+                    </div>
+                    <p>{{ list.movie_name }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

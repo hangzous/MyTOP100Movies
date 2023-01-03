@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1580px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    div#create_list_container
+    div#movies_list
+    div.movie
+    div#movie_header {
+        width: 100%;
+    }
+
+    div#create_list_container
+    div#movies_list
+    div.movie
+    div#movie_info img {
+        width: 250px;
+    } 
+
+    div#create_list_container
+    div#movies_list
+    div.movie
+    div#movie_info p {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    div#create_list_container
+    div#movies_list
+    div.movie
+    div#movie_info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#create_list_container
+    div#movies_list
+    div.movie
+    div#movie_info img {
+        width: 100%;
+    }
+
+    div#create_list_container
+    div#movies_list
+    div.movie
+    div#movie_info p {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    main {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    main {
+        width: 100%;
+    }
+
+    div#create_list_container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    div#create_list_container form {
+        width: 90%;
+    }
+
+    div#create_list_container
+    div#movies_list {
+        width: 90%;
+        margin-top: 15px;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,56 @@
+#profile {
+    margin-top: 80px;
+}
+
+#profile #profile_header {
+    text-align: center;
+    color: aliceblue;
+}
+
+#profile #profile_header h1 {
+    font-size: 30px;
+}
+
+#profile #profile_content {
+    margin-top: 50px;
+}
+
+#profile #profile_content .list {
+    box-shadow: 0px 3px rgba(36, 36, 36, .8);
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: rgb(70, 68, 68);
+}
+
+#profile #profile_content .list h2 {
+    color: aliceblue;
+}
+
+#profile #profile_content .list .list_header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile #profile_content 
+.list .list_header .buttons {
+    text-align: right;
+    width: 40%;
+}
+
+#profile #profile_content 
+.list .list_header .buttons button a {
+    font-size: 20px;
+    padding: 15px;
+    color: black;
+}
+
+#profile #profile_content .list p {
+    font-size: 19px;
+    color: rgb(233, 225, 225);
+}

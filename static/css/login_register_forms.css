@@ -1,0 +1,84 @@
+main section form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 150px;
+    padding: 27px;
+    background-color: rgba(23, 23, 22, 0.6);
+}
+
+main section form #text {
+    text-align: center;
+}
+
+main section form #text h2 {
+    color: white;
+}
+
+main section form #error_warning {
+    margin-top: 25px;
+}
+
+main section form #error_warning p {
+    font-size: 14pt;
+    font-weight: bold;
+    color: white;
+}
+
+main section form label {
+    color: rgb(233, 225, 225);
+    font-size: 13pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 34px;
+    margin-bottom: 13px;
+}
+
+main section form input,
+main section form button {
+    margin-bottom: 23px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+main section form input {
+    font-size: 10pt;
+    border: none;
+    background-color:rgb(246, 230, 230);
+}
+
+main section form hr {
+    margin-top: 20px;
+}
+
+main section form button {
+    margin-top: 10px;
+    font-size: 12pt;
+    color: rgb(232, 217, 217);
+    font-weight: bold;
+    background-color: rgb(122, 80, 220);
+    border: none;
+    box-shadow: 0px 3px 2px 0px rgb(44, 43, 43);
+    cursor: pointer;
+}
+
+main section div {
+    margin-top: 20px;
+    text-align: center;
+}
+
+main section div p {
+    color: white;
+}
+
+main section div p a {
+    color: rgb(72, 209, 72);
+    text-decoration: underline;
+}
+
+/* Remover a barra de pesquisa nestas páginas (desnecessária) */
+
+#search_box {
+    display: none;
+}

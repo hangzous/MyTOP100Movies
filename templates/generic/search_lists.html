@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search_lists.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/mobile_search_lists.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Buscar por listas: {{ search }} — 100{% endblock %}
+{% block content %}
+
+<div id="search_header">
+    <div>
+        <h2>Listas com "{{ search }}".</h2>
+    </div>
+    <div>
+        <form action="{{ url_for('generic.search_lists') }}" method="get">
+            <input type="text" name="search" id="search" placeholder="Estrangeiros, suspense...">
+            <button type="submit">
+                <img src="{{ url_for('static', filename='img/fi-xnsuhs-search.png') }}" alt="Search Icon">
+            </button>
+        </form>
+    </div>
+</div>
+<div id="found_lists">
+    {% if lists == [] %}
+        <div id="not_found">
+            <p>Nenhuma lista encontrada. 😔</p>
+        </div>
+    {% endif %}
+
+    {% if lists %}
+        {% for list in lists %}
+            <div class="list">
+                <h2>
+                    <a href="{{ url_for('generic.view_public_user_profile', username=list.username) }}">{{ list.username }}</a>
+                </h2>
+                <div id="list_content">
+                    <h3>{{ list.list_name }}</h3>
+                    <p>{{ list.movie_name }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

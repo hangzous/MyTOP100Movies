@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/mobile_settings.css') }}">
+{% extends 'layout.html' %}
+{% block title %}Configurações — 100{% endblock %}
+{% block content %}
+
+<div id="settings">
+    <div id="settings_list">
+        <h2>Configurações</h2>
+        <ul>
+            <li>
+                <a href="#account">Conta</a>
+            </li>
+            <li>
+                <a href="#account_lists">Listas</a>
+            </li>
+            <li>
+                <a href="#delete_account">Excluir conta</a>
+            </li>
+        </ul>
+    </div>
+    <div id="setting_section">
+        <div class="setting" id="account">
+            <h2>Conta</h2>
+            <div>
+                <form action="{{ url_for('user.change_username') }}" method="post">
+                    <h3>Mudar nome de usuário</h3>
+                    <input type="text" name="new_username" id="new_username" maxlength="35" required>
+                    <button type="submit" class="send">Enviar</button>
+                </form>
+
+                <form action="{{ url_for('user.change_password') }}" method="post">
+                    <h3>Mudar senha</h3>
+                    <input type="password" name="new_password" id="new_password" maxlength="255" required>
+                    <button type="submit" class="send">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="setting" id="account_lists">
+            <h2>Listas</h2>
+            <div>
+                <h3>Excluir listas</h3>
+                {% if lists %}
+                {% for l in lists %}
+                <form action="{{ url_for('user.delete_list') }}" method="post">
+                    <input type="text" name="list" id="list" value="{{ l }}" readonly>
+                    <br>
+                    <button type="submit">Excluir</button>
+                    <br>
+                </form>
+                {% endfor %}
+                {% else %}
+
+                <p>Você ainda não possui nenhuma lista. 😭</p>
+
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="setting" id="delete_account">
+            <h2>Excluir conta</h2>
+            <div>
+                <p>Deseja excluir sua conta?</p>
+                <form action="{{ url_for('user.delete_account') }}" method="post">
+                    <button type="submit">Excluir conta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

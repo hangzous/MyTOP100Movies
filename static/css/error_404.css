@@ -1,0 +1,26 @@
+#error {
+    text-align: center;
+    margin-top: 25%;
+}
+
+#error h1 {
+    font-size: 55px;
+    color:aliceblue;
+    margin-bottom: 25px;
+}
+
+#error a {
+    font-size: 23px;
+    color:rgb(72, 209, 72);
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 500px) {
+    #error {
+        padding: 15px;
+    }
+
+    #error h1 {
+        font-size: 40px;
+    }
+}

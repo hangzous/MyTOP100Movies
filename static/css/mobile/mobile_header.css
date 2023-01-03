@@ -1,0 +1,79 @@
+@media only screen and (max-width: 770px) {
+    
+    header {
+        padding: 17px;
+    }
+
+    header #menu {
+        display: none;
+    }
+
+    header #menu nav ul li#username {
+        padding: 30px;
+        margin-bottom: 35px;
+    }
+
+    header #mobile_menu {
+        display: block;
+    }
+
+    header #mobile_menu img {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    header #mobile_menu img#close {
+        display: none;
+    }
+
+
+    /* Quando o usuário clicar no menu */
+
+    header #menu.onscreen {
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: push;
+        animation-duration: .5s;
+        z-index: 5;
+    }
+
+    /* Keyframes */
+
+    @keyframes push {
+    
+        from {
+            left: 100%;
+        }
+
+        to {
+            left: 0%;
+        }
+    }
+
+    /* Fim Keyframes */
+
+    header #menu.onscreen nav ul {
+        flex-direction: column;
+        margin-top: 95px;
+    }
+
+    header #menu.onscreen nav ul li {
+        margin-bottom: 35px;
+        margin-right: auto;
+    }
+
+    header #mobile_menu img#close.close {
+        display: block;
+        cursor: pointer;
+        top: 2%;
+        right: 5%;
+        position: absolute;
+        z-index: 5;
+    }
+
+}

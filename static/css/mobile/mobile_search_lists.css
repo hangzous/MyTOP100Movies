@@ -1,0 +1,22 @@
+@media only screen and (max-width: 835px) {
+    main section #search_header {
+        flex-direction: column;
+        border: none;
+    }
+
+    main section #search_header div {
+        width: 100%;
+        justify-content: center;
+    }
+
+    main section #search_header div form {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main section #found_lists {
+        padding: 20px;
+    }
+}

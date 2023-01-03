@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+main {
+    width: 100% !important;
+}
+
+main section div#credits {
+    background-color:rgba(49, 48, 46, .9);
+    text-align: center;
+    color: rgb(233, 225, 225);
+}
+
+main section div#credits p {
+    padding: 3px;
+}
+
+main section div#center #search_box {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+main section div#center #search_box form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+main section div#center #search_box form input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 11pt;
+    padding: 5px;
+    background-color: rgb(227, 220, 220);
+    border: none;
+    border-radius: 2px;
+    width: 450px;
+    box-shadow: 0px 3px rgba(36, 36, 36, .8);
+}
+
+main section div#center #search_box form button {
+    cursor: pointer;
+    margin-left: 5px;
+    box-shadow: 0px 3px rgba(36, 36, 36, .8)
+}
+
+main section div#center #search_box form button img {
+    width: 30px;
+}
+
+main section div#center div#main_text {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    left: 0;
+}
+
+main section div#center div#main_text h1 {
+    font-size: 50px;
+    line-height: 75px;
+    color: rgb(253, 245, 245);
+    margin-bottom: 30px;
+}
+
+main section div#center div#main_text p {
+    margin: auto;
+    width: 690px;
+    text-align: center;
+    color: rgb(251, 243, 243);
+    font-size: 25px;
+}
+
+main section div#center div#github_link {
+    margin-bottom: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main section div#center div#github_link a {
+    padding: 10px;
+}
+
+main section div#center div#github_link img {
+    width: 45px;
+}

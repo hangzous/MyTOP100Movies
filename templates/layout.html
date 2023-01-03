@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/mobile_header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/mobile_section.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+          {% if current_user.is_authenticated %}
+          <h1>
+            <a href="{{ url_for('user.user_home') }}">MyTOP100Movies</a>
+          </h1>
+          {% else %}
+          <h1>
+            <a href="/">MyTOP100Movies</a>
+          </h1>
+          {% endif %}
+      </div>
+      <div id="menu">
+        <nav>
+          <ul>
+              {% if current_user.is_authenticated %}
+
+              <li><a href="{{ url_for('user.create_list') }}">Criar Lista</a></li>
+              <li><a href="{{ url_for('user.settings') }}">Configurações</a></li>
+              <li><a href="{{ url_for('user.logout') }}">Sair</a></li>
+
+              {% else %}
+
+              <li><a href="{{ url_for('auth.login') }}">Entrar</a></li>
+              <li><a href="{{ url_for('auth.register') }}">Registrar-se</a></li>
+
+              {% endif %}
+          </ul>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile_menu">
+        <!-- <a target="_blank" href="https://icons8.com/icon/36389/menu-rounded">Menu Rounded</a> 
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+        <img src="{{ url_for('static', filename='img/icons8-menu-rounded-50.png') }}" alt="Menu">
+        <img src="{{ url_for('static', filename='img/icons8-close-48.png') }}" alt="Close" id="close">
+      </div>
+    </header>
+    <main>
+      <section>{% block content %} {% endblock %}</section>
+    </main>
+    {% block javascript %} {% endblock %}
+    <script src="{{ url_for('static', filename='js/mobile/mobile_header.js') }}"></script>
+  </body>
+</html>

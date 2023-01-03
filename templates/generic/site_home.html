@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/site_home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/mobile_site_home.css') }}">
+{% extends 'layout.html' %}
+{% block title %}MyTOP100Movies{% endblock %}
+{% block content %}
+<div id="credits">
+    <p>Desenvolvido com ❤️ por <b>hangzous!</b></p>
+</div>
+<div id="center">
+    <div id="search_box">
+        <form action="{{ url_for('generic.search_lists') }}" method="get">
+          <input type="text" name="search" id="search" placeholder="Ficção científica, romance, animação...">
+          <button type="submit">
+            <img src="{{ url_for('static', filename='img/fi-xnsuhs-search.png') }}" alt="Search Icon">
+          </button>
+        </form>
+    </div>
+    <div id="main_text">
+        <h1>Compartilhe quem voce é,
+            <br>
+            com filmes!
+        </h1>
+        <p>
+            No <b>MyTOP100Movies</b>, você pode mostrar ao mundo seus preferidos do cinema, ou qualquer besteira desse tipo.
+        </p>
+    </div>
+    <div id="github_link">
+        <!-- 
+            <a target="_blank" href="https://icons8.com/icon/12599/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+         -->
+        <a href="https://github.com/hangzous" target="_blank">
+            <img src="{{ url_for('static', filename='img/icons8-github-50.png') }}" alt="GitHub Icon">
+        </a>
+    </div>
+</div>
+{% endblock %}

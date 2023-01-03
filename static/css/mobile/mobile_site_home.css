@@ -1,0 +1,62 @@
+@media only screen and (max-width: 875px) {
+    main section div#center div#main_text h1 {
+        font-size: 40px;
+    }
+
+    main section div#center div#main_text p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    main section div#center #search_box form input {
+        background-color: rgb(155, 149, 149);
+    }
+
+    main section div#center #search_box form input::placeholder {
+        color: rgb(51, 49, 49);
+    }
+
+    main section div#center div#main_text h1 {
+        padding: 15px;
+        line-height: 50px;
+    }
+
+    main section div#center div#main_text p {
+        padding: 15px;
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    main section div#center #search_box form input {
+        padding: 2px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    
+
+    main section div#center div#main_text h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    main section div#center div#main_text h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main section div#center div#main_text h1 {
+        font-size: 25px;
+    }
+
+    main section div#center div#main_text p {
+        font-size: 15px;
+    }
+}

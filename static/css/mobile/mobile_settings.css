@@ -1,0 +1,85 @@
+@media only screen and (max-width: 770px) {
+    div#settings {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 15px;
+        margin-left: 15px;
+    }   
+
+    div#settings h2 {
+        text-align: center;
+    }
+
+    div#settings div#settings_list,
+    div#settings div#setting_section {
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    div#settings div#settings_list {
+        margin-right: 0;
+        margin-bottom: 70px;
+    }
+
+    div#settings div#settings_list h2 {
+        text-align: center;
+    }
+
+    div#settings div#settings_list ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div#settings div#settings_list ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    div#settings 
+    div#setting_section
+    div#account div form {
+        text-align: center;
+    }
+
+    div#settings
+    div#setting_section
+    div#account_lists div {
+        text-align: center;
+    }
+
+    div#settings
+    div#setting_section
+    div#delete_account {
+        text-align: center;
+    }
+
+    div#settings
+    div#setting_section
+    div#delete_account div form button {
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 338px) {
+    
+    div#settings
+    div#setting_section
+    div#account div form input {
+        width: 100%;
+    }
+    
+    div#settings
+    div#setting_section
+    div#account div form button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    div#settings
+    div#setting_section
+    div#delete_account div form button {
+        width: 100%;
+    }
+}
